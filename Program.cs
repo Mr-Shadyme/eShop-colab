@@ -10,13 +10,22 @@ namespace eShop_colab
     {
         public static string UserName = "";
         public static string Password = "";
-        public decimal balance = 100;
+        public static decimal balance = 100;
 
-        public static int shirt = "";
-
+        public static int shirt = 0;
+        public static int shorts = 0;
+        public static int hats = 0;
+        public static int gloves = 0;
         //public static int Balance = 100;
+        //***Array for holding options for menus***(//
 
-        private static string Confirm = "";
+        public static string[] ClothingOptions = {"\tT-Shirt\n\tDescription: Cotton t-shirt, sizes: Small, Medium, Large\n\tPrice: $10\n",
+                    "\tShorts\n\tDescription: Polyester shorts, sizes: Small, Medium, Large\n\tPrice: $15\n",
+                    "\tJersey\n\tDescription: Wool Jersey , sizes: Small, Medium, Large\n\tPrice: $40",
+                    "\tPants\n\tDescription: Blended Wool and polyester pants , sizes: Small, Medium, Large\n\tPrice: $40",};
+
+
+        public static string Confirm = "";
 
         static void Main()
         {
@@ -46,18 +55,26 @@ namespace eShop_colab
         {
             Console.WriteLine("Please choose from the options below.");
             Console.WriteLine(" {1} Check Balance \n [2] Clothing Menu \n [3] Technoloy Menu");
+
+            Console.ReadLine();
             Console.WriteLine("test");
-            MenuOne();
+            ClothingMenu();
 
         }//end of Start()
 
 
-        static void MenuOne()
+        static void ClothingMenu()
         {
-            Console.WriteLine("This is the clothing menu, please select items using they corresponding key./n");
-            Console.WriteLine("[1] T-Shirt, [2] Shorts, [3] Hat, [4] Trousers, [5] Gloves.");
-
-
+            Console.WriteLine("This is the clothing menu, please select items using they corresponding key.\n");
+            
+            for (int i = 0; i < ClothingOptions.Length; i++)
+            {
+                Console.WriteLine(ClothingOptions[i]);
+            }
+            
+            
+            
+           
         }//end of MenuOne()
 
 
